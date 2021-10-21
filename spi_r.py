@@ -3,7 +3,8 @@ import RPi.GPIO as GPIO #Para controlar pines de la tarj$
 import spidev #Para implementar comunicación SPI
 import time
 
-GPIO.setmode(GPIO.BCM) #Definimos el modo para referirnos a los pines de la Raspberry Pi
+#GPIO.setmode(GPIO.BCM) #Definimos el modo para referirnos a los pines de la Raspberry Pi
+GPIO.setmode(GPIO.wPi)
 
 spi = spidev.SpiDev() #Creamos el objeto spi
 spi.open(0,0) #Abrimos el puerto SPI - Módulo 0, Dispositivo 0
